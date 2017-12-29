@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <EditText
+            android:id="@+id/etArraySize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Array Size"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Choose complexity"
+            android:textSize="25dp"/>
+        <RadioGroup
+            android:id="@+id/rgComplexity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbBestCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Best Case"
+                android:textSize="20dp"/>
+            <RadioButton
+                android:id="@+id/rbAverageCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Average Case"
+                android:textSize="20dp"/>
+            <RadioButton
+                android:id="@+id/rbWorstCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Worst Case"
+                android:textSize="20dp"/>
+        </RadioGroup>
+
+        <Button
+            android:onClick="generateArray"
+            android:id="@+id/btnGenerateArray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Array"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/tvDisplayArray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#FF000000"/>
+        <GridLayout
+            android:id="@+id/glAlgos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:rowCount="7"
+            android:columnCount="2"
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Algos"
+                android:textSize="25dp"
+                android:fontFamily="sans-serif"
+                android:layout_gravity="fill_horizontal"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Taken"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:fontFamily="sans-serif"
+                android:textColor="#FF000000"/>
+            <Button
+                android:onClick="selectionAlgorithm"
+                android:id="@+id/btnSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selection"
+                android:layout_gravity="fill_horizontal"/>
+            <TextView
+                android:id="@+id/tvSelection"
+                android:textSize="30dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"/>
+            <Button
+                android:onClick="bubbleAlgorithm"
+                android:id="@+id/btnBubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bubble"
+                android:layout_gravity="fill_horizontal"/>
+            <TextView
+                android:id="@+id/tvBubble"
+                android:textSize="30dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"/>
+            <Button
+                android:onClick="insertionAlgorithm"
+                android:id="@+id/btnInsertion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insertion"
+                android:layout_gravity="fill_horizontal"/>
+            <TextView
+                android:id="@+id/tvInsertion"
+                android:textSize="30dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"/>
+            <Button
+                android:onClick="quickAlgorithm"
+                android:id="@+id/btnQuick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick"
+                android:layout_gravity="fill_horizontal"/>
+            <TextView
+                android:id="@+id/tvQuick"
+                android:textSize="30dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"/>
+            <Button
+                android:onClick="mergeAlgorithm"
+                android:id="@+id/btnMerge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Merge"
+                android:layout_gravity="fill_horizontal"/>
+            <TextView
+                android:id="@+id/tvMerge"
+                android:textSize="30dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"/>
+            <Button
+                android:onClick="heapAlgorithm"
+                android:id="@+id/btnHeap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heap"
+                android:layout_gravity="fill_horizontal"/>
+            <TextView
+                android:id="@+id/tvHeap"
+                android:textSize="30dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"/>
+        </GridLayout>
+
+        <Button
+            android:onClick="benchmarkAll"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnBenchmarkAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Benchmark All"/>
+        <Button
+            android:onClick="startOver"
+            android:id="@+id/btnStartOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Over"/>
+        <Button
+            android:onClick="exit"
+            android:id="@+id/btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exit"/>
+
+    </LinearLayout>
+</ScrollView>
